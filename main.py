@@ -17,7 +17,7 @@ TorrentBot = Client(session_name=Config.SESSION_NAME, api_id=Config.API_ID, api_
 @TorrentBot.on_message(filters.command("start"))
 async def start_handler(_, message: Message):
     await message.reply_text(
-        text="Hello, I am Torrent Search Bot!\nI can search Torrent Magnetic Link from Inline.\n\nMade by @AbirHasan2005",
+        text="Hello, I am Torrent Search Bot!\nI can search Torrent Magnetic Link from Inline.\n\nMade by @shreevish",
         disable_web_page_preview=True,
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup(
@@ -28,7 +28,7 @@ async def start_handler(_, message: Message):
                  InlineKeyboardButton("Go Inline", switch_inline_query="!pts ")],
                 [InlineKeyboardButton("Search 1337x", switch_inline_query_current_chat=""),
                  InlineKeyboardButton("Go Inline", switch_inline_query="")],
-                [InlineKeyboardButton("Developer: @AbirHasan2005", url="https://t.me/AbirHasan2005")]
+                [InlineKeyboardButton("Developer: Satyamurthi", url="https://t.me/shreevish")]
             ]
         )
     )
@@ -75,7 +75,7 @@ async def inline_handlers(_, inline: InlineQuery):
                         title=f"{name_tor}",
                         description=f"Seeders: {torrent.seeds}, Leechers: {torrent.leeches}\nSize: {torrent.filesize}",
                         input_message_content=InputTextMessageContent(
-                            message_text=f"\n\n**Name:** {torrent.title}\n**Size:** {torrent.filesize}\n**Seeders:** {torrent.seeds}\n**Leechers:** {torrent.leeches}\n\n`{torrent.magnetlink}`\n\nPowered By @AHToolsBot",
+                            message_text=f"\n\n**Name:** {torrent.title}\n**Size:** {torrent.filesize}\n**Seeders:** {torrent.seeds}\n**Leechers:** {torrent.leeches}\n\n`{torrent.magnetlink}`\n\nPowered By @All_Movie_Rockers",
                             parse_mode="Markdown"
                         ),
                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pts ")]])
@@ -109,7 +109,7 @@ async def inline_handlers(_, inline: InlineQuery):
                                         title=f"{name_tor}",
                                         description=f"Seeders: {torrent[i]['seeder']}, Leechers: {torrent[i]['leecher']}\nSize: {torrent[i]['size']}",
                                         input_message_content=InputTextMessageContent(
-                                            message_text=f"\n\n**Name:** `{torrent[i]['name']}`\n**Size:** `{torrent[i]['size']}`\n**Seeders:** `{torrent[i]['seeder']}`\n**Leechers:** `{torrent[i]['leecher']}`\n\n`{torrent[i]['magnet']}`\n\nPowered By @AHToolsBot",
+                                            message_text=f"\n\n**Name:** `{torrent[i]['name']}`\n**Size:** `{torrent[i]['size']}`\n**Seeders:** `{torrent[i]['seeder']}`\n**Leechers:** `{torrent[i]['leecher']}`\n\n`{torrent[i]['magnet']}`\n\nPowered By @All_Movie_Rockers",
                                             parse_mode="Markdown"
                                         ),
                                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!s ")]])
